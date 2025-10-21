@@ -5,10 +5,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Impact Hive - Marketing That Buzzes</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 ```
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EP9FW381RG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-EP9FW381RG');
+</script>
+
+<style>
 * {
 margin: 0;
 padding: 0;
@@ -16,10 +24,9 @@ box-sizing: border-box;
 }
 
 body {
-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 line-height: 1.6;
-color: #ffffff;
-background: #000000;
+color: #333;
 overflow-x: hidden;
 }
 
@@ -27,14 +34,14 @@ overflow-x: hidden;
 nav {
 position: fixed;
 width: 100%;
-background: rgba(0, 0, 0, 0.95);
+background: rgba(255, 255, 255, 0.95);
 backdrop-filter: blur(10px);
 padding: 1rem 5%;
 display: flex;
 justify-content: space-between;
 align-items: center;
 z-index: 1000;
-border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+box-shadow: 0 2px 20px rgba(0,0,0,0.1);
 }
 
 .logo-nav {
@@ -42,8 +49,7 @@ display: flex;
 align-items: center;
 gap: 10px;
 font-size: 1.5rem;
-font-weight: 800;
-color: #ffffff;
+font-weight: bold;
 }
 
 .logo-small {
@@ -59,8 +65,8 @@ list-style: none;
 
 nav a {
 text-decoration: none;
-color: #ffffff;
-font-weight: 600;
+color: #333;
+font-weight: 500;
 transition: color 0.3s;
 }
 
@@ -74,7 +80,7 @@ min-height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
-background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+background: linear-gradient(135deg, #FFF8E7 0%, #FFE9B8 100%);
 padding: 6rem 5% 4rem;
 position: relative;
 overflow: hidden;
@@ -85,7 +91,7 @@ content: '';
 position: absolute;
 width: 500px;
 height: 500px;
-background: radial-gradient(circle, rgba(245,166,35,0.15) 0%, transparent 70%);
+background: radial-gradient(circle, rgba(245,166,35,0.2) 0%, transparent 70%);
 border-radius: 50%;
 top: -200px;
 right: -200px;
@@ -110,21 +116,19 @@ z-index: 1;
 .hero-text h1 {
 font-size: 3.5rem;
 margin-bottom: 1rem;
-color: #ffffff;
+color: #1a1a1a;
 line-height: 1.2;
-font-weight: 900;
 }
 
 .hero-text .tagline {
 font-size: 1.5rem;
-color: #F5A623;
+color: #666;
 margin-bottom: 2rem;
-font-weight: 700;
 }
 
 .hero-text p {
 font-size: 1.1rem;
-color: #cccccc;
+color: #555;
 margin-bottom: 2rem;
 }
 
@@ -139,7 +143,7 @@ padding: 1rem 2rem;
 border: none;
 border-radius: 50px;
 font-size: 1rem;
-font-weight: 700;
+font-weight: 600;
 cursor: pointer;
 transition: all 0.3s;
 text-decoration: none;
@@ -148,25 +152,25 @@ display: inline-block;
 
 .btn-primary {
 background: #F5A623;
-color: #000000;
-box-shadow: 0 4px 15px rgba(245,166,35,0.4);
+color: white;
+box-shadow: 0 4px 15px rgba(245,166,35,0.3);
 }
 
 .btn-primary:hover {
-background: #ffffff;
+background: #E09612;
 transform: translateY(-2px);
-box-shadow: 0 6px 20px rgba(255,255,255,0.3);
+box-shadow: 0 6px 20px rgba(245,166,35,0.4);
 }
 
 .btn-secondary {
-background: transparent;
-color: #ffffff;
-border: 2px solid #ffffff;
+background: white;
+color: #F5A623;
+border: 2px solid #F5A623;
 }
 
 .btn-secondary:hover {
-background: #ffffff;
-color: #000000;
+background: #F5A623;
+color: white;
 transform: translateY(-2px);
 }
 
@@ -179,7 +183,7 @@ align-items: center;
 .hero-logo img {
 max-width: 100%;
 height: auto;
-filter: drop-shadow(0 10px 30px rgba(245,166,35,0.3));
+filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1));
 animation: pulse 3s ease-in-out infinite;
 }
 
@@ -191,23 +195,21 @@ animation: pulse 3s ease-in-out infinite;
 /* Services Section */
 .services {
 padding: 6rem 5%;
-background: #000000;
+background: white;
 }
 
 .section-title {
 text-align: center;
 font-size: 2.5rem;
 margin-bottom: 1rem;
-color: #ffffff;
-font-weight: 900;
+color: #1a1a1a;
 }
 
 .section-subtitle {
 text-align: center;
 font-size: 1.2rem;
-color: #F5A623;
+color: #666;
 margin-bottom: 4rem;
-font-weight: 600;
 }
 
 .services-grid {
@@ -219,195 +221,40 @@ margin: 0 auto;
 }
 
 .service-card {
-background: #1a1a1a;
+background: #FEFEFE;
 padding: 2rem;
 border-radius: 20px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 transition: all 0.3s;
-border: 2px solid rgba(255, 255, 255, 0.1);
-cursor: pointer;
-position: relative;
-overflow: hidden;
-}
-
-.service-card::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: linear-gradient(135deg, rgba(245,166,35,0.1) 0%, transparent 100%);
-opacity: 0;
-transition: opacity 0.3s;
+border: 2px solid transparent;
 }
 
 .service-card:hover {
 transform: translateY(-10px);
+box-shadow: 0 10px 30px rgba(245,166,35,0.2);
 border-color: #F5A623;
-box-shadow: 0 10px 40px rgba(245,166,35,0.3);
-}
-
-.service-card:hover::before {
-opacity: 1;
 }
 
 .service-icon {
 font-size: 3rem;
 margin-bottom: 1rem;
-position: relative;
-z-index: 1;
 }
 
 .service-card h3 {
 font-size: 1.5rem;
 margin-bottom: 1rem;
-color: #ffffff;
-font-weight: 800;
-position: relative;
-z-index: 1;
+color: #1a1a1a;
 }
 
 .service-card p {
-color: #cccccc;
+color: #666;
 line-height: 1.8;
-position: relative;
-z-index: 1;
-}
-
-.service-card .view-more {
-margin-top: 1rem;
-color: #F5A623;
-font-weight: 700;
-font-size: 0.9rem;
-position: relative;
-z-index: 1;
-}
-
-/* Modal */
-.modal {
-display: none;
-position: fixed;
-z-index: 2000;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-background: rgba(0, 0, 0, 0.95);
-backdrop-filter: blur(10px);
-overflow-y: auto;
-}
-
-.modal.active {
-display: flex;
-align-items: center;
-justify-content: center;
-animation: fadeIn 0.3s;
-}
-
-@keyframes fadeIn {
-from { opacity: 0; }
-to { opacity: 1; }
-}
-
-.modal-content {
-background: #1a1a1a;
-padding: 3rem;
-border-radius: 20px;
-max-width: 900px;
-width: 90%;
-margin: 2rem;
-position: relative;
-border: 2px solid #F5A623;
-animation: slideUp 0.3s;
-}
-
-@keyframes slideUp {
-from { transform: translateY(50px); opacity: 0; }
-to { transform: translateY(0); opacity: 1; }
-}
-
-.modal-close {
-position: absolute;
-top: 1.5rem;
-right: 1.5rem;
-font-size: 2rem;
-color: #ffffff;
-cursor: pointer;
-background: none;
-border: none;
-width: 40px;
-height: 40px;
-display: flex;
-align-items: center;
-justify-content: center;
-border-radius: 50%;
-transition: all 0.3s;
-}
-
-.modal-close:hover {
-background: rgba(245,166,35,0.2);
-transform: rotate(90deg);
-}
-
-.modal-header {
-margin-bottom: 2rem;
-}
-
-.modal-header h2 {
-font-size: 2.5rem;
-color: #ffffff;
-margin-bottom: 0.5rem;
-font-weight: 900;
-}
-
-.modal-header p {
-color: #F5A623;
-font-size: 1.1rem;
-font-weight: 600;
-}
-
-.modal-gallery {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 1.5rem;
-margin-top: 2rem;
-}
-
-.gallery-item {
-border-radius: 15px;
-overflow: hidden;
-position: relative;
-aspect-ratio: 4/3;
-background: #2a2a2a;
-}
-
-.gallery-item img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform 0.3s;
-}
-
-.gallery-item:hover img {
-transform: scale(1.1);
-}
-
-.gallery-caption {
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-padding: 1rem;
-color: #ffffff;
-font-weight: 600;
-font-size: 0.9rem;
 }
 
 /* About Section */
 .about {
 padding: 6rem 5%;
-background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+background: linear-gradient(135deg, #FFF8E7 0%, #FFFFFF 100%);
 }
 
 .about-content {
@@ -418,7 +265,7 @@ text-align: center;
 
 .about-content p {
 font-size: 1.2rem;
-color: #cccccc;
+color: #555;
 margin-bottom: 2rem;
 line-height: 1.8;
 }
@@ -432,29 +279,24 @@ margin-top: 3rem;
 
 .stat {
 text-align: center;
-padding: 2rem;
-background: rgba(245,166,35,0.1);
-border-radius: 15px;
-border: 1px solid rgba(245,166,35,0.3);
 }
 
 .stat-number {
 font-size: 3rem;
-font-weight: 900;
+font-weight: bold;
 color: #F5A623;
 display: block;
 }
 
 .stat-label {
-color: #ffffff;
+color: #666;
 font-size: 1.1rem;
-font-weight: 600;
 }
 
 /* Contact Section */
 .contact {
 padding: 6rem 5%;
-background: #000000;
+background: white;
 }
 
 .contact-container {
@@ -469,21 +311,19 @@ margin-bottom: 1.5rem;
 .form-group label {
 display: block;
 margin-bottom: 0.5rem;
-font-weight: 700;
-color: #ffffff;
+font-weight: 600;
+color: #333;
 }
 
 .form-group input,
 .form-group textarea {
 width: 100%;
 padding: 1rem;
-border: 2px solid rgba(255, 255, 255, 0.2);
+border: 2px solid #E0E0E0;
 border-radius: 10px;
 font-size: 1rem;
 transition: border-color 0.3s;
 font-family: inherit;
-background: #1a1a1a;
-color: #ffffff;
 }
 
 .form-group input:focus,
@@ -499,16 +339,14 @@ min-height: 150px;
 
 /* Footer */
 footer {
-background: #000000;
+background: #1a1a1a;
 color: white;
 padding: 3rem 5%;
 text-align: center;
-border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 footer p {
 margin-bottom: 1rem;
-color: #cccccc;
 }
 
 .social-links {
@@ -519,21 +357,13 @@ margin-top: 1rem;
 }
 
 .social-links a {
-color: #ffffff;
+color: white;
 font-size: 1.5rem;
 transition: color 0.3s;
-width: 45px;
-height: 45px;
-display: flex;
-align-items: center;
-justify-content: center;
-border: 2px solid rgba(255,255,255,0.2);
-border-radius: 50%;
 }
 
 .social-links a:hover {
 color: #F5A623;
-border-color: #F5A623;
 }
 
 /* Responsive */
@@ -561,15 +391,6 @@ font-size: 0.9rem;
 
 .services-grid {
 grid-template-columns: 1fr;
-}
-
-.modal-content {
-padding: 2rem;
-margin: 1rem;
-}
-
-.modal-header h2 {
-font-size: 2rem;
 }
 }
 </style>
@@ -610,7 +431,7 @@ font-size: 2rem;
 </div>
 </div>
 <div class="hero-logo">
-<img src="data:image/svg+xml,%3Csvg viewBox='0 0 800 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M150 100 L230 150 L230 250 L150 300 L70 250 L70 150 Z' fill='%23F5A623'/%3E%3Cellipse cx='150' cy='160' rx='24' ry='32' fill='%23000'/%3E%3Cellipse cx='120' cy='180' rx='30' ry='16' fill='%23000'/%3E%3Cellipse cx='180' cy='180' rx='30' ry='16' fill='%23000'/%3E%3Cpath d='M150 190 L130 220 L150 210 L170 220 Z' fill='%23000'/%3E%3Ctext x='300' y='230' font-family='Arial, sans-serif' font-size='100' font-weight='bold' fill='%23ffffff'%3EIMPACT%3C/text%3E%3Ctext x='300' y='320' font-family='Arial, sans-serif' font-size='100' font-weight='bold' fill='%23ffffff'%3EHIVE%3C/text%3E%3C/svg%3E" alt="Impact Hive Logo">
+<img src="data:image/svg+xml,%3Csvg viewBox='0 0 800 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M150 100 L230 150 L230 250 L150 300 L70 250 L70 150 Z' fill='%23F5A623'/%3E%3Cellipse cx='150' cy='160' rx='24' ry='32' fill='%23000'/%3E%3Cellipse cx='120' cy='180' rx='30' ry='16' fill='%23000'/%3E%3Cellipse cx='180' cy='180' rx='30' ry='16' fill='%23000'/%3E%3Cpath d='M150 190 L130 220 L150 210 L170 220 Z' fill='%23000'/%3E%3Ctext x='300' y='230' font-family='Arial, sans-serif' font-size='100' font-weight='bold' fill='%231a1a1a'%3EIMPACT%3C/text%3E%3Ctext x='300' y='320' font-family='Arial, sans-serif' font-size='100' font-weight='bold' fill='%231a1a1a'%3EHIVE%3C/text%3E%3C/svg%3E" alt="Impact Hive Logo">
 </div>
 </div>
 </section>
@@ -620,62 +441,43 @@ font-size: 2rem;
 <h2 class="section-title">Our Services</h2>
 <p class="section-subtitle">Comprehensive marketing solutions tailored to your needs</p>
 <div class="services-grid">
-<div class="service-card" data-service="digital">
+<div class="service-card">
 <div class="service-icon">📱</div>
 <h3>Digital Marketing</h3>
 <p>Strategic social media campaigns, content marketing, and digital advertising that drives engagement and conversions.</p>
-<p class="view-more">Click to view examples →</p>
 </div>
-<div class="service-card" data-service="brand">
+<div class="service-card">
 <div class="service-icon">🎨</div>
 <h3>Brand Development</h3>
 <p>Build a memorable brand identity that resonates with your audience and stands out in the market.</p>
-<p class="view-more">Click to view examples →</p>
 </div>
-<div class="service-card" data-service="analytics">
+<div class="service-card">
 <div class="service-icon">📊</div>
 <h3>Analytics & Insights</h3>
 <p>Data-driven strategies backed by comprehensive analytics to maximize your ROI and inform decisions.</p>
-<p class="view-more">Click to view examples →</p>
 </div>
-<div class="service-card" data-service="content">
+<div class="service-card">
 <div class="service-icon">✍️</div>
 <h3>Content Creation</h3>
 <p>Compelling content that tells your story and connects with your audience across all platforms.</p>
-<p class="view-more">Click to view examples →</p>
 </div>
-<div class="service-card" data-service="growth">
+<div class="service-card">
 <div class="service-icon">🚀</div>
 <h3>Growth Strategy</h3>
 <p>Scalable marketing strategies designed to grow your business and reach new markets effectively.</p>
-<p class="view-more">Click to view examples →</p>
 </div>
-<div class="service-card" data-service="sales">
+<div class="service-card">
 <div class="service-icon">🎯</div>
 <h3>Sales Training Integration</h3>
 <p>We don't just create marketing—we train your sales team to leverage it effectively. Seamless integration of marketing strategies with your sales process for maximum impact.</p>
-<p class="view-more">Click to view examples →</p>
 </div>
-<div class="service-card" data-service="consulting">
+<div class="service-card">
 <div class="service-icon">💼</div>
 <h3>Consulting</h3>
 <p>Expert marketing consultation to help you navigate challenges and seize opportunities.</p>
-<p class="view-more">Click to view examples →</p>
 </div>
 </div>
 </section>
-
-<!-- Modal -->
-<div id="serviceModal" class="modal">
-<div class="modal-content">
-<button class="modal-close" onclick="closeModal()">&times;</button>
-<div class="modal-header">
-<h2 id="modalTitle"></h2>
-<p id="modalDescription"></p>
-</div>
-<div class="modal-gallery" id="modalGallery"></div>
-</div>
-</div>
 
 <!-- About Section -->
 <section id="about" class="about">
@@ -738,103 +540,70 @@ font-size: 2rem;
 </div>
 </footer>
 
+<!-- Chat Widget -->
+<div class="chat-widget">
+<button class="chat-button" onclick="toggleChat()" aria-label="Open chat">💬</button>
+<div class="chat-box" id="chatBox">
+<div class="chat-header">
+<span>Chat with us!</span>
+<button class="chat-close" onclick="toggleChat()">&times;</button>
+</div>
+<div class="chat-messages" id="chatMessages">
+<div class="chat-message bot">
+👋 Hi! Thanks for visiting Impact Hive. How can we help you today?
+</div>
+</div>
+<div class="chat-input-area">
+<form class="chat-form" onsubmit="sendMessage(event)">
+<input type="text" class="chat-input" id="chatInput" placeholder="Type your message..." required>
+<button type="submit" class="chat-send">➤</button>
+</form>
+</div>
+</div>
+</div>
+
 <script>
-// Service data with images
-const serviceData = {
-digital: {
-title: "Digital Marketing",
-description: "Strategic social media campaigns and digital advertising",
-images: [
-{ url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800", caption: "Analytics Dashboard" },
-{ url: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800", caption: "Social Media Strategy" },
-{ url: "https://images.unsplash.com/photo-1557838923-2985c318be48?w=800", caption: "Campaign Management" }
-]
-},
-brand: {
-title: "Brand Development",
-description: "Create a memorable brand identity that stands out",
-images: [
-{ url: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800", caption: "Brand Identity Design" },
-{ url: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800", caption: "Logo Design" },
-{ url: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800", caption: "Brand Guidelines" }
-]
-},
-analytics: {
-title: "Analytics & Insights",
-description: "Data-driven strategies to maximize ROI",
-images: [
-{ url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800", caption: "Data Analysis" },
-{ url: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800", caption: "Performance Metrics" },
-{ url: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800", caption: "Reporting Dashboard" }
-]
-},
-content: {
-title: "Content Creation",
-description: "Compelling content that connects with your audience",
-images: [
-{ url: "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800", caption: "Content Writing" },
-{ url: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800", caption: "Creative Storytelling" },
-{ url: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800", caption: "Blog Content" }
-]
-},
-growth: {
-title: "Growth Strategy",
-description: "Scalable strategies to reach new markets",
-images: [
-{ url: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800", caption: "Strategic Planning" },
-{ url: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800", caption: "Team Collaboration" },
-{ url: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800", caption: "Business Growth" }
-]
-},
-sales: {
-title: "Sales Training Integration",
-description: "Train your team to leverage marketing effectively",
-images: [
-{ url: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800", caption: "Team Training Sessions" },
-{ url: "https://images.unsplash.com/photo-1552664688-cf412ec27db2?w=800", caption: "Sales Workshops" },
-{ url: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800", caption: "Strategy Implementation" }
-]
-},
-consulting: {
-title: "Consulting",
-description: "Expert guidance to navigate marketing challenges",
-images: [
-{ url: "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800", caption: "Strategic Consulting" },
-{ url: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800", caption: "Business Advisory" },
-{ url: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800", caption: "Expert Analysis" }
-]
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+});
+});
+
+// Form submission handler
+document.querySelector('form').addEventListener('submit', function(e) {
+e.preventDefault();
+alert('Thank you for your message! We\'ll get back to you soon.');
+this.reset();
+});
+
+// Intersection Observer for scroll animations
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
 };
 
-// Service card click handlers
-document.querySelectorAll('.service-card').forEach(card => {
-card.addEventListener('click', function() {
-const service = this.dataset.service;
-openModal(service);
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.style.opacity = '1';
+entry.target.style.transform = 'translateY(0)';
+}
 });
+}, observerOptions);
+
+document.querySelectorAll('.service-card, .stat').forEach(el => {
+el.style.opacity = '0';
+el.style.transform = 'translateY(20px)';
+el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+observer.observe(el);
 });
-
-function openModal(service) {
-const data = serviceData[service];
-const modal = document.getElementById('serviceModal');
-const title = document.getElementById('modalTitle');
-const description = document.getElementById('modalDescription');
-const gallery = document.getElementById('modalGallery');
-
-title.textContent = data.title;
-description.textContent = data.description;
-
-gallery.innerHTML = '';
-data.images.forEach(img => {
-const item = document.createElement('div');
-item.className = 'gallery-item';
-item.innerHTML = `
-<img src="${img.url}" alt="${img.caption}" loading="lazy">
-<div class="gallery-caption">${img.caption}</div>
-`;
-gallery.appendChild(item);
-});
-
-modal.classList.add('active');
-document.body.style.overflow = '
+</script>
 ```
+
+</body>
+</html>
