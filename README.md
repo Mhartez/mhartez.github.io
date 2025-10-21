@@ -1,1 +1,577 @@
-# mhartez.github.io
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impact Hive - Marketing That Buzzes</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+```
+body {
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+line-height: 1.6;
+color: #333;
+overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+position: fixed;
+width: 100%;
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+padding: 1rem 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 1000;
+box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.logo-nav {
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+.logo-small {
+width: 40px;
+height: 40px;
+}
+
+nav ul {
+display: flex;
+gap: 2rem;
+list-style: none;
+}
+
+nav a {
+text-decoration: none;
+color: #333;
+font-weight: 500;
+transition: color 0.3s;
+}
+
+nav a:hover {
+color: #F5A623;
+}
+
+/* Hero Section */
+.hero {
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background: linear-gradient(135deg, #FFF8E7 0%, #FFE9B8 100%);
+padding: 6rem 5% 4rem;
+position: relative;
+overflow: hidden;
+}
+
+.hero::before {
+content: '';
+position: absolute;
+width: 500px;
+height: 500px;
+background: radial-gradient(circle, rgba(245,166,35,0.2) 0%, transparent 70%);
+border-radius: 50%;
+top: -200px;
+right: -200px;
+animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-30px); }
+}
+
+.hero-content {
+max-width: 1200px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 4rem;
+align-items: center;
+position: relative;
+z-index: 1;
+}
+
+.hero-text h1 {
+font-size: 3.5rem;
+margin-bottom: 1rem;
+color: #1a1a1a;
+line-height: 1.2;
+}
+
+.hero-text .tagline {
+font-size: 1.5rem;
+color: #666;
+margin-bottom: 2rem;
+}
+
+.hero-text p {
+font-size: 1.1rem;
+color: #555;
+margin-bottom: 2rem;
+}
+
+.cta-buttons {
+display: flex;
+gap: 1rem;
+flex-wrap: wrap;
+}
+
+.btn {
+padding: 1rem 2rem;
+border: none;
+border-radius: 50px;
+font-size: 1rem;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s;
+text-decoration: none;
+display: inline-block;
+}
+
+.btn-primary {
+background: #F5A623;
+color: white;
+box-shadow: 0 4px 15px rgba(245,166,35,0.3);
+}
+
+.btn-primary:hover {
+background: #E09612;
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(245,166,35,0.4);
+}
+
+.btn-secondary {
+background: white;
+color: #F5A623;
+border: 2px solid #F5A623;
+}
+
+.btn-secondary:hover {
+background: #F5A623;
+color: white;
+transform: translateY(-2px);
+}
+
+.hero-logo {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.hero-logo img {
+max-width: 100%;
+height: auto;
+filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1));
+animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.05); }
+}
+
+/* Services Section */
+.services {
+padding: 6rem 5%;
+background: white;
+}
+
+.section-title {
+text-align: center;
+font-size: 2.5rem;
+margin-bottom: 1rem;
+color: #1a1a1a;
+}
+
+.section-subtitle {
+text-align: center;
+font-size: 1.2rem;
+color: #666;
+margin-bottom: 4rem;
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.service-card {
+background: #FEFEFE;
+padding: 2rem;
+border-radius: 20px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+transition: all 0.3s;
+border: 2px solid transparent;
+}
+
+.service-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 10px 30px rgba(245,166,35,0.2);
+border-color: #F5A623;
+}
+
+.service-icon {
+font-size: 3rem;
+margin-bottom: 1rem;
+}
+
+.service-card h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+color: #1a1a1a;
+}
+
+.service-card p {
+color: #666;
+line-height: 1.8;
+}
+
+/* About Section */
+.about {
+padding: 6rem 5%;
+background: linear-gradient(135deg, #FFF8E7 0%, #FFFFFF 100%);
+}
+
+.about-content {
+max-width: 900px;
+margin: 0 auto;
+text-align: center;
+}
+
+.about-content p {
+font-size: 1.2rem;
+color: #555;
+margin-bottom: 2rem;
+line-height: 1.8;
+}
+
+.stats {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 2rem;
+margin-top: 3rem;
+}
+
+.stat {
+text-align: center;
+}
+
+.stat-number {
+font-size: 3rem;
+font-weight: bold;
+color: #F5A623;
+display: block;
+}
+
+.stat-label {
+color: #666;
+font-size: 1.1rem;
+}
+
+/* Contact Section */
+.contact {
+padding: 6rem 5%;
+background: white;
+}
+
+.contact-container {
+max-width: 600px;
+margin: 0 auto;
+}
+
+.form-group {
+margin-bottom: 1.5rem;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 0.5rem;
+font-weight: 600;
+color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 1rem;
+border: 2px solid #E0E0E0;
+border-radius: 10px;
+font-size: 1rem;
+transition: border-color 0.3s;
+font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+outline: none;
+border-color: #F5A623;
+}
+
+.form-group textarea {
+resize: vertical;
+min-height: 150px;
+}
+
+/* Footer */
+footer {
+background: #1a1a1a;
+color: white;
+padding: 3rem 5%;
+text-align: center;
+}
+
+footer p {
+margin-bottom: 1rem;
+}
+
+.social-links {
+display: flex;
+gap: 1rem;
+justify-content: center;
+margin-top: 1rem;
+}
+
+.social-links a {
+color: white;
+font-size: 1.5rem;
+transition: color 0.3s;
+}
+
+.social-links a:hover {
+color: #F5A623;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.hero-content {
+grid-template-columns: 1fr;
+text-align: center;
+}
+
+.hero-text h1 {
+font-size: 2.5rem;
+}
+
+.hero-text .tagline {
+font-size: 1.2rem;
+}
+
+nav ul {
+gap: 1rem;
+}
+
+nav a {
+font-size: 0.9rem;
+}
+
+.services-grid {
+grid-template-columns: 1fr;
+}
+}
+</style>
+```
+
+</head>
+<body>
+<!-- Navigation -->
+<nav>
+<div class="logo-nav">
+<svg class="logo-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<path d="M50 5 L90 30 L90 70 L50 95 L10 70 L10 30 Z" fill="#F5A623"/>
+<ellipse cx="50" cy="40" rx="12" ry="16" fill="#000"/>
+<ellipse cx="35" cy="50" rx="15" ry="8" fill="#000"/>
+<ellipse cx="65" cy="50" rx="15" ry="8" fill="#000"/>
+<path d="M50 55 L40 70 L50 65 L60 70 Z" fill="#000"/>
+</svg>
+<span>IMPACT HIVE</span>
+</div>
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+```
+<!-- Hero Section -->
+<section class="hero">
+<div class="hero-content">
+<div class="hero-text">
+<h1>Marketing That Buzzes</h1>
+<p class="tagline">Creating Impact, Together</p>
+<p>We help businesses grow through innovative marketing strategies that generate real results. Let's build something extraordinary.</p>
+<div class="cta-buttons">
+<a href="#contact" class="btn btn-primary">Get Started</a>
+<a href="#services" class="btn btn-secondary">Our Services</a>
+</div>
+</div>
+<div class="hero-logo">
+<img src="data:image/svg+xml,%3Csvg viewBox='0 0 800 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M150 100 L230 150 L230 250 L150 300 L70 250 L70 150 Z' fill='%23F5A623'/%3E%3Cellipse cx='150' cy='160' rx='24' ry='32' fill='%23000'/%3E%3Cellipse cx='120' cy='180' rx='30' ry='16' fill='%23000'/%3E%3Cellipse cx='180' cy='180' rx='30' ry='16' fill='%23000'/%3E%3Cpath d='M150 190 L130 220 L150 210 L170 220 Z' fill='%23000'/%3E%3Ctext x='300' y='230' font-family='Arial, sans-serif' font-size='100' font-weight='bold' fill='%231a1a1a'%3EIMPACT%3C/text%3E%3Ctext x='300' y='320' font-family='Arial, sans-serif' font-size='100' font-weight='bold' fill='%231a1a1a'%3EHIVE%3C/text%3E%3C/svg%3E" alt="Impact Hive Logo">
+</div>
+</div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+<h2 class="section-title">Our Services</h2>
+<p class="section-subtitle">Comprehensive marketing solutions tailored to your needs</p>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon">📱</div>
+<h3>Digital Marketing</h3>
+<p>Strategic social media campaigns, content marketing, and digital advertising that drives engagement and conversions.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">🎨</div>
+<h3>Brand Development</h3>
+<p>Build a memorable brand identity that resonates with your audience and stands out in the market.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">📊</div>
+<h3>Analytics & Insights</h3>
+<p>Data-driven strategies backed by comprehensive analytics to maximize your ROI and inform decisions.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">✍️</div>
+<h3>Content Creation</h3>
+<p>Compelling content that tells your story and connects with your audience across all platforms.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">🚀</div>
+<h3>Growth Strategy</h3>
+<p>Scalable marketing strategies designed to grow your business and reach new markets effectively.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">🎯</div>
+<h3>Sales Training Integration</h3>
+<p>We don't just create marketing—we train your sales team to leverage it effectively. Seamless integration of marketing strategies with your sales process for maximum impact.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">💼</div>
+<h3>Consulting</h3>
+<p>Expert marketing consultation to help you navigate challenges and seize opportunities.</p>
+</div>
+</div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+<h2 class="section-title">About Impact Hive</h2>
+<div class="about-content">
+<p>At Impact Hive, we believe in the power of collaboration. Like bees working together to create something remarkable, we partner with businesses to build marketing strategies that create lasting impact.</p>
+<p>Our team brings together creative minds and analytical thinkers to deliver results that matter. We're not just marketers—we're your growth partners.</p>
+<div class="stats">
+<div class="stat">
+<span class="stat-number">100+</span>
+<span class="stat-label">Clients Served</span>
+</div>
+<div class="stat">
+<span class="stat-number">500+</span>
+<span class="stat-label">Campaigns Launched</span>
+</div>
+<div class="stat">
+<span class="stat-number">250%</span>
+<span class="stat-label">Average ROI Growth</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+<h2 class="section-title">Let's Create Impact Together</h2>
+<p class="section-subtitle">Ready to grow your business? Get in touch with us today.</p>
+<div class="contact-container">
+<form>
+<div class="form-group">
+<label for="name">Name</label>
+<input type="text" id="name" name="name" required>
+</div>
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+<label for="company">Company</label>
+<input type="text" id="company" name="company">
+</div>
+<div class="form-group">
+<label for="message">Message</label>
+<textarea id="message" name="message" required></textarea>
+</div>
+<button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+</form>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<p>&copy; 2025 Impact Hive. All rights reserved.</p>
+<p>Marketing that buzzes with results.</p>
+<div class="social-links">
+<a href="#" aria-label="LinkedIn">in</a>
+<a href="#" aria-label="Twitter">𝕏</a>
+<a href="#" aria-label="Instagram">📷</a>
+</div>
+</footer>
+
+<script>
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+});
+});
+
+// Form submission handler
+document.querySelector('form').addEventListener('submit', function(e) {
+e.preventDefault();
+alert('Thank you for your message! We\'ll get back to you soon.');
+this.reset();
+});
+
+// Intersection Observer for scroll animations
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.style.opacity = '1';
+entry.target.style.transform = 'translateY(0)';
+}
+});
+}, observerOptions);
+
+document.querySelectorAll('.service-card, .stat').forEach(el => {
+el.style.opacity = '0';
+el.style.transform = 'translateY(20px)';
+el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+observer.observe(el);
+});
+</script>
+```
+
+</body>
+</html>
